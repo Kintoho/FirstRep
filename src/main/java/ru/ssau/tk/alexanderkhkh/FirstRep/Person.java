@@ -1,43 +1,55 @@
 package ru.ssau.tk.alexanderkhkh.FirstRep;
 
-import java.util.Date;
-
 public class Person {
-    private String name;
-    private double hight;
-    private double weitght;
-    private Date birthday;
+    private String firstName;
+    private String lastName;
+    private int passportID;
 
-    public String getName() {
-        return name;
+    public Person(String firstName, String lastName, int passportID) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.passportID = passportID;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Person(String firstName, String lastName){
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
-    public double getHight() {
-        return hight;
+    public Person(){
+
     }
 
-    public void setHight(double hight) {
-        this.hight = hight;
+    public Person(int passportID){
+        this.passportID = passportID;
     }
 
-    public double getWeitght() {
-        return weitght;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setWeitght(double weitght) {
-        this.weitght = weitght;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public Date getBirthday() {
-        return birthday;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public int getPassportID() {
+        return passportID;
+    }
+
+    public void setPassportID(int passportID) {
+        this.passportID = passportID;
+    }
+    public static void main(String[] args) {
+        Person Sasha = new Person("Alexander", "Khkhlv");
+        Person Pasha = new Person(123123);
     }
 }
 
