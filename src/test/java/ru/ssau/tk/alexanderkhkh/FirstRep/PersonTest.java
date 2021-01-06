@@ -50,5 +50,8 @@ public class PersonTest {
 
         Person man = new Person();
         assertNotNull(man);
+
+        Person Vasya = new Person("Vasya", "Maksimov", Person.Gender.Male);
+        assertEquals(Vasya.getGender(), Person.Gender.Male);
     }
 }

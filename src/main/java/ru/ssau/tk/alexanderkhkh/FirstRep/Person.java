@@ -46,9 +46,23 @@ public class Person {
     public void setPassportID(int passportID) {
         this.passportID = passportID;
     }
-    public static void main(String[] args) {
-        Person Sasha = new Person("Alexander", "Khkhlv");
-        Person Pasha = new Person(123123);
+
+    public enum Gender {Male, Female}
+
+    Gender gender;
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
+
+    public Person(String firstName, String lastName, Gender gender){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
     }
 }
 
