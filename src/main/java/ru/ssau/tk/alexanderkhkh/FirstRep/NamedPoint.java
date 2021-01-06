@@ -1,6 +1,8 @@
 package ru.ssau.tk.alexanderkhkh.FirstRep;
 
-public class NamedPoint extends Point {
+import ru.ssau.tk.alexanderkhkh.FirstRep.generator.Resettable;
+
+public class NamedPoint extends Point implements Resettable {
     public  String name;
 
     public String getName() {
@@ -24,4 +26,8 @@ public class NamedPoint extends Point {
         this.name = name;
     }
 
+    @Override
+    public void reset(){
+        setName("Absent");
+    }
 }

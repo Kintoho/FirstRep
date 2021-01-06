@@ -16,4 +16,12 @@ public class NamedPointTest {
         namedPoint2.setName("456");
         assertEquals(namedPoint2.getName(), "456");
     }
+
+    @Test
+    public void testReset() {
+        NamedPoint namedPoint = new NamedPoint(1, 2, 3, "123");
+        assertEquals(namedPoint.getName(), "123");
+        namedPoint.reset();
+        assertEquals(namedPoint.getName(), "Absent");
+    }
 }
