@@ -28,6 +28,24 @@ public class Points{
         return point.length();
     }
 
+    public static Point opposite(Point point){
+        return new Point(0 - point.getX(), 0 - point.getY(), 0 - point.getZ());
+    }
+
+    public static Point inverse(Point point){
+        return new Point(1/ point.getX(), 1/ point.getY(), 1/ point.getZ());
+    }
+
+    public static double scalarProduct(Point point1, Point point2){
+        return point1.getX()*point2.getX() + point1.getY()*point2.getY() + point1.getZ()* point2.getZ();
+    }
+
+    public static Point vectorProduct(Point point1, Point point2){
+        return new Point(point1.getY()*point2.getZ() - point1.getZ()*point2.getY(), point1.getZ()*point2.getX() - point1.getX()*point2.getZ(),
+                point1.getX()*point2.getY() - point1.getY()*point2.getX());
+    }
+
+
     public static void main(String[] args) {
         System.out.println();
         Point point1 = new Point(1, 2, 3);
