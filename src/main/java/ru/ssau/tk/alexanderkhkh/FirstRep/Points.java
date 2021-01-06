@@ -20,6 +20,10 @@ public class Points{
         return new Point(point1.getX()/point2.getX(),point1.getY()/point2.getY(), point1.getZ()/point2.getZ());
     }
 
+    public static Point enlarge(Point point, double a){
+        return  new Point(point.getX()*a, point.getY()*a, point.getZ()*a);
+    }
+
     public static void main(String[] args) {
         System.out.println();
         Point point1 = new Point(1, 2, 3);
