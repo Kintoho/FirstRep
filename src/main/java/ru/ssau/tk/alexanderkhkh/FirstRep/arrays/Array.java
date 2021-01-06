@@ -25,4 +25,14 @@ public class Array {
         }
         return array3;
     }
+
+    public static int[] fourthArray(int size){
+        int[] array4 = new int[size];
+        int j = 2;
+        for(int i = (array4.length-1); i >=0; i--){
+            array4[i]=j;
+            j+=2;
+        }
+        return array4;
+    }
 }

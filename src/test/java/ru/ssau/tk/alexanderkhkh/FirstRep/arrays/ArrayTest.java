@@ -22,5 +22,11 @@ public class ArrayTest {
         assertEquals(array3[0], 1, 0.001);
         assertEquals(array3[2], 5, 0.001);
         assertEquals(array3[4], 9, 0.001);
+
+        int[] array4 = Array.fourthArray(5);
+        assertEquals(array4.length, 5, 0.001);
+        assertEquals(array4[0], 10, 0.001);
+        assertEquals(array4[2], 6, 0.001);
+        assertEquals(array4[4], 2, 0.001);
     }
 }
