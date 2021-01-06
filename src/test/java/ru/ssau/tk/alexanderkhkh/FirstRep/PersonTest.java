@@ -5,12 +5,11 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
 public class PersonTest {
-    Person Pasha = new Person("Pasha", "Po", 312);
-    Person Grisha = new Person();
+    public static final Person Pasha = new Person("Pasha", "Po", 312);
+    public static Person Grisha = new Person();
 
     @Test
     public void testFirstName(){
-        Grisha.getFirstName(); // компилируется, но так делать не надо
         Grisha.setFirstName(null);
         assertNull(Grisha.getFirstName(), null);
         Grisha.setFirstName("Grisha");
@@ -20,7 +19,6 @@ public class PersonTest {
 
     @Test
     public void testLastName(){
-        Grisha.getLastName(); // компилируется, но так делать не надо
         Grisha.setLastName(null);
         assertNull(Grisha.getLastName(), null);
         Grisha.setLastName("Ko");
@@ -31,7 +29,6 @@ public class PersonTest {
 
     @Test
     public void testPassportID(){
-        Grisha.getPassportID(); // компилируется, но так делать не надо
         Grisha.setPassportID(123);
         assertEquals(Grisha.getPassportID(), 123, 0.001);
         assertEquals(Pasha.getPassportID(), 312, 0.001);
