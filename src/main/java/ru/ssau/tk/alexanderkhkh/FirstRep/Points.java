@@ -24,11 +24,16 @@ public class Points{
         return  new Point(point.getX()*a, point.getY()*a, point.getZ()*a);
     }
 
+    public static double length(Point point){
+        return point.length();
+    }
+
     public static void main(String[] args) {
         System.out.println();
         Point point1 = new Point(1, 2, 3);
         Point point2 = new Point(4, 5, 6);
         Point point3 = sum(point1, point2);
         System.out.println(point3.getX());
+        System.out.println(length(point1));
     }
 }

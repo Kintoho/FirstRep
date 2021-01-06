@@ -1,4 +1,5 @@
 package ru.ssau.tk.alexanderkhkh.FirstRep;
+import java.lang.Math;
 
 public class Point {
     public final double x;
@@ -21,5 +22,9 @@ public class Point {
 
     public double getZ() {
         return z;
+    }
+
+    public double length(){
+        return Math.sqrt(getX()*getX() + getY()*getY() + getZ()*getZ());
     }
 }
