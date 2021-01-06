@@ -15,4 +15,14 @@ public class Array {
         array2[array2.length-1]=2;
         return array2;
     }
+
+    public static int[] thirdArray(int size){
+        int[] array3 = new int[size];
+        int k = 1;
+        for (int i = 0; i < array3.length; i++) {
+            array3[i] = k;
+            k+=2;
+        }
+        return array3;
+    }
 }

@@ -17,5 +17,10 @@ public class ArrayTest {
         assertEquals(array2[4], 2, 0.001);
         assertEquals(array2[2], 1, 0.001);
 
+        int[] array3 = Array.thirdArray(5);
+        assertEquals(array3.length, 5, 0.001);
+        assertEquals(array3[0], 1, 0.001);
+        assertEquals(array3[2], 5, 0.001);
+        assertEquals(array3[4], 9, 0.001);
     }
 }
