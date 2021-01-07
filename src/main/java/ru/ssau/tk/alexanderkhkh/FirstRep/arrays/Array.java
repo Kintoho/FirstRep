@@ -1,5 +1,7 @@
 package ru.ssau.tk.alexanderkhkh.FirstRep.arrays;
 
+import static java.util.Arrays.sort;
+
 public class Array {
     public static int[] firstArray(int size) {
         int[] array1 = new int[size];
@@ -52,5 +54,32 @@ public class Array {
             array6[i]=i*i;
         }
         return array6;
+    }
+
+    public static double[] quadraticEquation(double a, double b, double c){
+        Double D = b*b - 4*a*c;
+        double[] array;
+        if(a==0){
+            array = new double[1];
+            array[0] = -c / b;
+            return array;
+        }
+        else {
+            if (D < 0) {
+                array = new double[0];
+                return array;
+            } else if (D == 0) {
+                array = new double[1];
+                array[0] = -b / (2*a);
+                return array;
+            }
+            else {
+                array = new double[2];
+                array[0]= (-b + Math.sqrt(D))/(2*a);
+                array[1]= (-b - Math.sqrt(D))/(2*a);
+                sort(array);
+                return array;
+            }
+        }
     }
 }

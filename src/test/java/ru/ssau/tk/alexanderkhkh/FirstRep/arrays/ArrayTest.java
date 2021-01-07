@@ -41,5 +41,21 @@ public class ArrayTest {
         assertEquals(array6[2], 4, 0.001);
         assertEquals(array6[5], 25, 0.001);
         assertEquals(array6[0], 0, 0.001);
+
+        double[] radical1 = Array.quadraticEquation(1, 4, 4);
+        assertEquals(radical1[0], -2, 0.001);
+        assertEquals(radical1.length, 1, 0.001);
+        double[] radical2 = Array.quadraticEquation(0, 4, 4);
+        assertEquals(radical2[0], -1, 0.001);
+        assertEquals(radical2.length, 1, 0.001);
+        double[] radical3 = Array.quadraticEquation(1, 4, 10);
+        assertEquals(radical3.length, 0, 0.001);
+        double[] radical4 = Array.quadraticEquation(1, -3, -4);
+        assertEquals(radical4.length, 2, 0.001);
+        assertEquals(radical4[0], -1, 0.001);
+        assertEquals(radical4[1], 4, 0.001);
+
+
+
     }
 }
