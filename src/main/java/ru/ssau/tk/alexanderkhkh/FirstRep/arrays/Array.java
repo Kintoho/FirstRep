@@ -28,11 +28,21 @@ public class Array {
 
     public static int[] fourthArray(int size){
         int[] array4 = new int[size];
-        int j = 2;
+        int k = 2;
         for(int i = (array4.length-1); i >=0; i--){
-            array4[i]=j;
-            j+=2;
+            array4[i]=k;
+            k+=2;
         }
         return array4;
+    }
+
+    public static int[] fifthArray(int size){
+        int[] array5 = new int[size];
+        array5[0]=0;
+        array5[1]=1;
+        for (int i = 2; i < array5.length; i++) {
+            array5[i] = array5[i-1]+array5[i-2];
+        }
+        return array5;
     }
 }
