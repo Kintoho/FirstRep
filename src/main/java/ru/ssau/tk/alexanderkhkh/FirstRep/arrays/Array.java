@@ -45,4 +45,12 @@ public class Array {
         }
         return array5;
     }
+
+    public static int[] sixthArray(int size){
+        int[] array6 = new int[size];
+        for (int i = 0; i < array6.length; i++){
+            array6[i]=i*i;
+        }
+        return array6;
+    }
 }

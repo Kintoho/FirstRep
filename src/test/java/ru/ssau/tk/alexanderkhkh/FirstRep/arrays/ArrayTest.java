@@ -35,5 +35,11 @@ public class ArrayTest {
         assertEquals(array5[6], 8, 0.001);
         assertEquals(array5[3], 2, 0.001);
         assertEquals(array5[7], 13, 0.001);
+
+        int[] array6 = Array.sixthArray(6);
+        assertEquals(array6.length, 6, 0.001);
+        assertEquals(array6[2], 4, 0.001);
+        assertEquals(array6[5], 25, 0.001);
+        assertEquals(array6[0], 0, 0.001);
     }
 }
