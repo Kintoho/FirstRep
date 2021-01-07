@@ -55,6 +55,12 @@ public class ArrayTest {
         assertEquals(radical4[0], -1, 0.001);
         assertEquals(radical4[1], 4, 0.001);
 
+        int[] array7 = Array.seventhArray(10);
+        assertEquals(array7.length, 10, 0.001);
+        assertEquals(array7[0], 1, 0.001);
+        assertEquals(array7[1], 2, 0.001);
+        assertEquals(array7[2], 4, 0.001);
+        assertEquals(array7[3], 5, 0.001);
 
 
     }

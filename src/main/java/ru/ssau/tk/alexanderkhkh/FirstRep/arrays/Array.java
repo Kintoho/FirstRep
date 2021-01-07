@@ -82,4 +82,20 @@ public class Array {
             }
         }
     }
+
+    public static int[] seventhArray(int size){
+        int[] array7 = new int[size];
+        int t = 1;
+        for (int i = 0; i < array7.length; i++){
+            if((t%3) != 0){
+                array7[i]=t;
+            }
+            else{
+                t++;
+                array7[i]=t;
+            }
+            t++;
+        }
+        return array7;
+    }
 }
