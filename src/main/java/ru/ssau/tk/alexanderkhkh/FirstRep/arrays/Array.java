@@ -191,4 +191,20 @@ public class Array {
         }
         return k;
     }
+
+    public static Integer eighteenthArray(int[] numbers){
+        int k = 0;
+        if(numbers.length == 0){
+            return null;
+        }
+        for (int i = 0; i < numbers.length-1; i++ ) {
+            if(numbers[i] <= numbers[i+1]){
+                k = numbers[i+1];
+            }
+        }
+        if (numbers[0] > numbers[numbers.length-1]){
+            k = numbers[0];
+        }
+        return k;
+    }
 }

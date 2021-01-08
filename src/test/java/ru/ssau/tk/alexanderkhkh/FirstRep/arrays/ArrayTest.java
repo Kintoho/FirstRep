@@ -124,6 +124,14 @@ public class ArrayTest {
         assertEquals(Array.seventeenthArray(numbers), 3, 0.001);
         assertNotEquals(Array.seventeenthArray(numbers), 2, 0.001);
 
+        //2.18
+        int[] array18_1 = new int[]{1, 2, 3, 4, 5, 6};
+        int[] array18_2 = new int[]{10, 2, 3, 4, 5, 6};
+        int[] voidArray = new int[0];
+        assertEquals(Array.eighteenthArray(array18_1), 6, 0.001);
+        assertEquals(Array.eighteenthArray(array18_2), 10, 0.001);
+        assertNull(Array.eighteenthArray(voidArray));
+
 
 
     }
