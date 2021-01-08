@@ -157,4 +157,11 @@ public class Array {
         }
         return array12;
     }
+
+    public static int[] fourteenthArray(int[] numbers){
+        for (int i = 0; i < numbers.length; i++){
+            numbers[i]= -numbers[i];
+        }
+        return numbers;
+    }
 }
