@@ -81,5 +81,13 @@ public class ArrayTest {
         ArrayList<Integer> array10 = Array.tenthArray(4 );
         assertEquals(array10.get(0), 1, 0.001);
         assertEquals(array10.get(1), 2, 0.001);
+
+        ArrayList<Integer> array11 = Array.eleventhArray(20 );
+        assertEquals(array11.get(0), 2, 0.001);
+        assertEquals(array11.get(1), 3, 0.001);
+        assertEquals(array11.get(2), 5, 0.001);
+        assertEquals(array11.get(3), 7, 0.001);
+        assertEquals(array11.get(4), 11, 0.001);
+
     }
 }

@@ -127,4 +127,20 @@ public class Array {
         }
         return array10;
     }
+
+    public static ArrayList<Integer> eleventhArray(int a){
+        ArrayList<Integer> array11 = new ArrayList<>();
+        for(int i = 2; i <= a; i++){
+            int k = 0;
+            for( int j = 2; j < a; j++){
+                if(i%j == 0){
+                    k++;
+                }
+            }
+            if (k==1){
+                array11.add(i);
+            }
+        }
+        return array11;
+    }
 }
