@@ -2,6 +2,8 @@ package ru.ssau.tk.alexanderkhkh.FirstRep.arrays;
 
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
+
 import static org.testng.Assert.*;
 
 public class ArrayTest {
@@ -76,6 +78,8 @@ public class ArrayTest {
         assertEquals(array9[2], 18, 0.001);
         assertNotEquals(array9[3], 40, 0.001);
 
-
+        ArrayList<Integer> array10 = Array.tenthArray(4 );
+        assertEquals(array10.get(0), 1, 0.001);
+        assertEquals(array10.get(1), 2, 0.001);
     }
 }

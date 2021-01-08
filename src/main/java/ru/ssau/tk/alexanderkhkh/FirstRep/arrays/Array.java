@@ -1,5 +1,7 @@
 package ru.ssau.tk.alexanderkhkh.FirstRep.arrays;
 
+import java.util.ArrayList;
+
 import static java.util.Arrays.sort;
 
 public class Array {
@@ -114,5 +116,15 @@ public class Array {
             array9[i]=array9[i-1]*b;
         }
         return array9;
+    }
+
+    public static ArrayList<Integer> tenthArray(int a){
+        ArrayList<Integer> array10 = new ArrayList<>(); // надеюсь, можно было делать через него :)
+        for (int i = 1; i <= Math.sqrt(a); i++){
+            if((a%i)==0){
+                array10.add(i);
+            }
+        }
+        return array10;
     }
 }
