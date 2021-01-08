@@ -181,4 +181,14 @@ public class Array {
         }
         return false;
     }
+
+    public static int seventeenthArray(int[] numbers){
+        int k = 0;
+        for (int number : numbers) {
+            if (number % 2 == 0) {
+                k++;
+            }
+        }
+        return k;
+    }
 }

@@ -120,6 +120,10 @@ public class ArrayTest {
         Integer[] array16_2 = new Integer[]{1,2,3,0};
         assertFalse(Array.sixteenthArray(array16_2));
 
+        //2.17
+        assertEquals(Array.seventeenthArray(numbers), 3, 0.001);
+        assertNotEquals(Array.seventeenthArray(numbers), 2, 0.001);
+
 
 
     }
