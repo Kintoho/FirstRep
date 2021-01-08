@@ -106,4 +106,13 @@ public class Array {
         }
         return array8;
     }
+
+    public static int[] ninthArray(int size, int a, int b){
+        int[] array9 = new int[size];
+        array9[0]=a;
+        for (int i = 1; i < array9.length; i++){
+            array9[i]=array9[i-1]*b;
+        }
+        return array9;
+    }
 }

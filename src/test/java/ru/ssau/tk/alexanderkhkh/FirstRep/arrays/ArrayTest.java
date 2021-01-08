@@ -69,6 +69,13 @@ public class ArrayTest {
         assertEquals(array8[2], 8, 0.001);
         assertEquals(array8[3], 11, 0.001);
 
+        int[] array9 = Array.ninthArray(9,2 ,3 );
+        assertEquals(array9.length, 9, 0.001);
+        assertEquals(array9[0], 2, 0.001);
+        assertEquals(array9[1], 6, 0.001);
+        assertEquals(array9[2], 18, 0.001);
+        assertNotEquals(array9[3], 40, 0.001);
+
 
     }
 }
