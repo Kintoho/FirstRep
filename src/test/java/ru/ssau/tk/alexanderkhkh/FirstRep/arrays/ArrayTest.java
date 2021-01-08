@@ -89,5 +89,15 @@ public class ArrayTest {
         assertEquals(array11.get(3), 7, 0.001);
         assertEquals(array11.get(4), 11, 0.001);
 
+        int[] array12 = Array.twelfthArray(7);
+        assertEquals(array12.length, 7, 0.001);
+        assertEquals(array12[0], 1, 0.001);
+        assertEquals(array12[1], 2, 0.001);
+        assertEquals(array12[2], 3, 0.001);
+        assertEquals(array12[3], 4, 0.001);
+        assertEquals(array12[4], 3, 0.001);
+        assertEquals(array12[5], 2, 0.001);
+        assertEquals(array12[6], 1, 0.001);
+
     }
 }

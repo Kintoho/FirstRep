@@ -143,4 +143,18 @@ public class Array {
         }
         return array11;
     }
+
+    public static int[] twelfthArray(int size){
+        int[] array12 = new int[size];
+        int k = 1;
+        for (int i = 0; i < array12.length/2; i++){
+            array12[i]=k;
+            k++;
+        }
+        for (int j = array12.length/2; j < array12.length; j++){
+            array12[j]=k;
+            k--;
+        }
+        return array12;
+    }
 }
