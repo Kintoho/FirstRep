@@ -163,4 +163,13 @@ public class Array {
             numbers[i]= -numbers[i];
         }
     }
+
+    public static boolean fifteenthArray(int[] numbers, int a){
+        for (int i = 0; i < numbers.length; i++){
+            if(a==i){
+                return true;
+            }
+        }
+        return false;
+    }
 }

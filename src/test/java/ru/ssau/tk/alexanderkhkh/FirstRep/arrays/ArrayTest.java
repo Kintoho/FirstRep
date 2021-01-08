@@ -110,5 +110,10 @@ public class ArrayTest {
         assertEquals(numbers[5], -6, 0.001);
         assertEquals(numbers[6], 7, 0.001);
 
+        //2.15
+        assertTrue(Array.fifteenthArray(numbers, 5));
+        assertFalse(Array.fifteenthArray(numbers, 7));
+
+
     }
 }
