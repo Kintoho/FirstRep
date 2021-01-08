@@ -114,6 +114,13 @@ public class ArrayTest {
         assertTrue(Array.fifteenthArray(numbers, 5));
         assertFalse(Array.fifteenthArray(numbers, 7));
 
+        //2.16
+        Integer[] array16_1 = new Integer[]{1,2,3,null};
+        assertTrue(Array.sixteenthArray(array16_1));
+        Integer[] array16_2 = new Integer[]{1,2,3,0};
+        assertFalse(Array.sixteenthArray(array16_2));
+
+
 
     }
 }

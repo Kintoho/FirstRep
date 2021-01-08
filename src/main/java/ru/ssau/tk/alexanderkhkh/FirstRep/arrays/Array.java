@@ -172,4 +172,13 @@ public class Array {
         }
         return false;
     }
+
+    public static boolean sixteenthArray(Integer[] numbers){
+        for (Integer number : numbers) {
+            if (number == null) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
