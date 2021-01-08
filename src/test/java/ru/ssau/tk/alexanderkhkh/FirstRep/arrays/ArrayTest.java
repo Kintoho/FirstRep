@@ -62,6 +62,13 @@ public class ArrayTest {
         assertEquals(array7[2], 4, 0.001);
         assertEquals(array7[3], 5, 0.001);
 
+        int[] array8 = Array.eighthArray(8,2 ,3 );
+        assertEquals(array8.length, 8, 0.001);
+        assertEquals(array8[0], 2, 0.001);
+        assertEquals(array8[1], 5, 0.001);
+        assertEquals(array8[2], 8, 0.001);
+        assertEquals(array8[3], 11, 0.001);
+
 
     }
 }

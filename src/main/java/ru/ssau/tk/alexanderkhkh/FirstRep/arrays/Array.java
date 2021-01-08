@@ -4,8 +4,7 @@ import static java.util.Arrays.sort;
 
 public class Array {
     public static int[] firstArray(int size) {
-        int[] array1 = new int[size];
-        return array1;
+        return new int[size];
     }
 
     public static int[] secondArray(int size){
@@ -57,7 +56,7 @@ public class Array {
     }
 
     public static double[] quadraticEquation(double a, double b, double c){
-        Double D = b*b - 4*a*c;
+        double D = b*b - 4*a*c;
         double[] array;
         if(a==0){
             array = new double[1];
@@ -97,5 +96,14 @@ public class Array {
             t++;
         }
         return array7;
+    }
+
+    public static int[] eighthArray(int size, int a, int b){
+        int[] array8 = new int[size];
+        array8[0]=a;
+        for (int i = 1; i < array8.length; i++){
+            array8[i]=array8[i-1]+b;
+        }
+        return array8;
     }
 }
