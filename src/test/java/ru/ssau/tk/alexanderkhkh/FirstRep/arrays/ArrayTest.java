@@ -99,15 +99,16 @@ public class ArrayTest {
         assertEquals(array12[5], 2, 0.001);
         assertEquals(array12[6], 1, 0.001);
 
-        int[] array14 = Array.fourteenthArray(new int[]{1, 2, 3, 4, 5, 6, -7});
-        assertEquals(array14.length, 7, 0.001);
-        assertEquals(array14[0], -1, 0.001);
-        assertEquals(array14[1], -2, 0.001);
-        assertEquals(array14[2], -3, 0.001);
-        assertEquals(array14[3], -4, 0.001);
-        assertEquals(array14[4], -5, 0.001);
-        assertEquals(array14[5], -6, 0.001);
-        assertEquals(array14[6], 7, 0.001);
+        int[] numbers = new int[]{1, 2, 3, 4, 5, 6, -7};
+        Array.fourteenthArray(numbers);
+        assertEquals(numbers.length, 7, 0.001);
+        assertEquals(numbers[0], -1, 0.001);
+        assertEquals(numbers[1], -2, 0.001);
+        assertEquals(numbers[2], -3, 0.001);
+        assertEquals(numbers[3], -4, 0.001);
+        assertEquals(numbers[4], -5, 0.001);
+        assertEquals(numbers[5], -6, 0.001);
+        assertEquals(numbers[6], 7, 0.001);
 
     }
 }
