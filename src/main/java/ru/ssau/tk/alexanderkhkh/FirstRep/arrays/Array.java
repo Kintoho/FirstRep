@@ -207,4 +207,18 @@ public class Array {
         }
         return k;
     }
+
+    public static Integer nineteenthArray(int[] numbers){
+        int k = 0;
+        if(numbers.length == 0){
+            return null;
+        }
+        for (int i = 2; i < numbers.length; i++ ) {
+            if(i%2 == 0){
+                k = k + numbers[i];
+            }
+        }
+
+        return k;
+    }
 }

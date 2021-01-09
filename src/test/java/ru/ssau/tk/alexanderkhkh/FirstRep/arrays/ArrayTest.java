@@ -132,7 +132,9 @@ public class ArrayTest {
         assertEquals(Array.eighteenthArray(array18_2), 10, 0.001);
         assertNull(Array.eighteenthArray(voidArray));
 
-
-
+        //2.19
+        assertEquals(Array.nineteenthArray(array18_1), 8, 0.001 );
+        assertEquals(Array.nineteenthArray(array18_2), 8, 0.001 );
+        assertNull(Array.nineteenthArray(voidArray));
     }
 }
