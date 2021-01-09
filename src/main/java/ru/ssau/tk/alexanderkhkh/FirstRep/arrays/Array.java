@@ -221,4 +221,18 @@ public class Array {
 
         return k;
     }
+
+    public static boolean twentiethArray(int[] numbers){
+        int k = 0;
+        int m = 0;
+        for (int number : numbers) {
+            if (number % numbers[0] == 0) {
+                k++;
+            }
+            if (number % numbers[numbers.length - 1] == 0) {
+                m++;
+            }
+        }
+        return k > m;
+    }
 }
