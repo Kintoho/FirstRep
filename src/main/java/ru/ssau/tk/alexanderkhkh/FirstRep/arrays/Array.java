@@ -235,4 +235,26 @@ public class Array {
         }
         return k > m;
     }
+
+    public static int twentyFirstArray(int[] numbers){
+        int k = 0;
+        int[] array = new int[numbers.length];
+        for(int i = 0; i < numbers.length; i++){
+            for (int number : numbers) {
+                if (numbers[i] == number) {
+                    k++;
+                }
+            }
+            array[i] = k;
+            k = 0;
+        }
+        int m = eighteenthArray(array); //элемент, встречающийся максимальное кол-во раз
+
+        for(int i = 0; i < numbers.length; i++){
+            if (array[i] == m){
+                return numbers[i];
+            }
+        }
+        return -1;
+    }
 }

@@ -141,5 +141,10 @@ public class ArrayTest {
         int[] array20 = new int[]{2, 2, 9, 4, 5, 3};
         assertTrue(Array.twentiethArray(array20));
         assertFalse(Array.twentiethArray(array18_2));
+
+        //2.21
+        int[] array21 = new int[]{6, 6, 4, 4, 5, 5};
+        assertEquals(Array.twentyFirstArray(array20), 2, 0.001);
+        assertEquals(Array.twentyFirstArray(array21), 6, 0.001);
     }
 }
