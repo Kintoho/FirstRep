@@ -257,4 +257,13 @@ public class Array {
         }
         return -1;
     }
+
+    public static int twentySecondArray(int[] numbers, int a){
+        for (int i = 0; i < numbers.length; i++){
+            if (a == numbers[i]){
+                return i;
+            }
+        }
+        return -1;
+    }
 }
