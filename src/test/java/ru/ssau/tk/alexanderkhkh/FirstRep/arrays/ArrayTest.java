@@ -153,11 +153,19 @@ public class ArrayTest {
 
         //2.23
         int[] array22 = new int[]{1, 5, 6, 4};
-        int[] array22_2 = new int[]{6, 5, 1, 4};
         Array.twentyThirdArray(array22);
         assertEquals(array22[0], 6, 0.001);
         assertEquals(array22[2], 1, 0.001);
+    }
 
-
+    @Test
+    public void testTwentyFourthArray(){
+        int[] array = new int[]{1, 2, 3, 4, 5, 6};
+        Array.twentyFourthArray(array);
+        assertEquals(array[0],-2, 0.001);
+        assertEquals(array[2],-4, 0.001);
+        Array.twentyFourthArray(array);
+        assertEquals(array[0],1, 0.001);
+        assertEquals(array[2],3, 0.001);
     }
 }

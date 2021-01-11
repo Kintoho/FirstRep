@@ -271,7 +271,6 @@ public class Array {
         int maxNumber = eighteenthArray(numbers);
         int min = 0, minNumber = numbers[0];
         int max = 0;
-        int k = numbers[0];
         for (int i = 0; i < numbers.length-1; i++ ) {
             if(minNumber > numbers[i+1]){
                 min = i+1;
@@ -293,6 +292,11 @@ public class Array {
         }
         numbers[min] = maxNumber;
         numbers[max] = minNumber;
+    }
 
+    public static void twentyFourthArray(int [] numbers){
+        for (int i = 0; i < numbers.length-1; i++ ){
+            numbers[i] = ~ numbers[i];
+        }
     }
 }
