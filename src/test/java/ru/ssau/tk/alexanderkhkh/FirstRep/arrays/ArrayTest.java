@@ -150,5 +150,14 @@ public class ArrayTest {
         //2.22
         assertEquals(Array.twentySecondArray(array21, 4), 2, 0.001);
         assertEquals(Array.twentySecondArray(array20, 4), 3, 0.001);
+
+        //2.23
+        int[] array22 = new int[]{1, 5, 6, 4};
+        int[] array22_2 = new int[]{6, 5, 1, 4};
+        Array.twentyThirdArray(array22);
+        assertEquals(array22[0], 6, 0.001);
+        assertEquals(array22[2], 1, 0.001);
+
+
     }
 }

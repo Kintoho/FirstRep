@@ -266,4 +266,33 @@ public class Array {
         }
         return -1;
     }
+
+    public static void twentyThirdArray(int [] numbers){
+        int maxNumber = eighteenthArray(numbers);
+        int min = 0, minNumber = numbers[0];
+        int max = 0;
+        int k = numbers[0];
+        for (int i = 0; i < numbers.length-1; i++ ) {
+            if(minNumber > numbers[i+1]){
+                min = i+1;
+                minNumber = numbers[i+1];
+                System.out.println(minNumber);
+            }
+        }
+        if (numbers[0] < numbers[numbers.length-1]){
+            min = 0;
+        }
+
+        for (int i = 0; i < numbers.length-1; i++ ) {
+            if(numbers[i] <= numbers[i+1]){
+                max = i+1;
+            }
+        }
+        if (numbers[0] > numbers[numbers.length-1]){
+            max = 0;
+        }
+        numbers[min] = maxNumber;
+        numbers[max] = minNumber;
+
+    }
 }
