@@ -179,4 +179,21 @@ public class ArrayTest {
         assertEquals(array2[0],1, 0.001);
         assertEquals(array2[2],3, 0.001);
     }
+
+    @Test
+    public void testTwentySixthArray(){
+        int[] array1_1 = new int[]{1, 2, 3, 4, 5, 6};
+        int[] array1_2 = new int[]{1, 2, 3, 4, 5, 6, 7};
+        int[] array2 = Array.twentySixthArray(array1_1);
+        assertEquals(array2.length, 3, 0.001);
+        assertEquals(array2[0], 3, 0.001);
+        assertEquals(array2[1], 7, 0.001);
+        assertEquals(array2[2], 11, 0.001);
+        int[] array3 = Array.twentySixthArray(array1_2);
+        assertEquals(array3.length, 4, 0.001);
+        assertEquals(array3[0], 3, 0.001);
+        assertEquals(array3[1], 7, 0.001);
+        assertEquals(array3[2], 11, 0.001);
+        assertEquals(array3[3], 7, 0.001);
+    }
 }
