@@ -168,4 +168,15 @@ public class ArrayTest {
         assertEquals(array[0],1, 0.001);
         assertEquals(array[2],3, 0.001);
     }
+
+    @Test
+    public void testTwentyFifthArray(){
+        int[] array1 = new int[]{1, 2, 3, 4, 5, 6};
+        int[] array2 = Array.twentyFifthArray(array1);
+        assertEquals(array2[0],-2, 0.001);
+        assertEquals(array2[2],-4, 0.001);
+        array2 = Array.twentyFifthArray(array2);
+        assertEquals(array2[0],1, 0.001);
+        assertEquals(array2[2],3, 0.001);
+    }
 }

@@ -299,4 +299,13 @@ public class Array {
             numbers[i] = ~ numbers[i];
         }
     }
+
+    public static int[] twentyFifthArray(int[] numbers){
+            int[] array = new int[numbers.length];
+            for (int i = 0; i < array.length; i++) {
+                array[i] = ~numbers[i];
+            }
+            return array;
+
+    }
 }
