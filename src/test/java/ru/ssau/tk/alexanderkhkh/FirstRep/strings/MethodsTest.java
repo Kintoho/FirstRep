@@ -1,7 +1,6 @@
 package ru.ssau.tk.alexanderkhkh.FirstRep.strings;
 
 import org.testng.annotations.Test;
-import ru.ssau.tk.alexanderkhkh.FirstRep.arrays.Array;
 
 import static org.testng.Assert.*;
 
@@ -22,15 +21,26 @@ public class MethodsTest {
         Methods.secondTask(string2);
     }
 
-    @Test
+   /* @Test
     public void testThirdTask(){
         Methods.thirdTask();
-    }
+    }*/
 
     @Test
     public void testFourthTask(){
-        assertEquals(Methods.fourthTask("abcba"),true);
-        assertEquals(Methods.fourthTask("abcde"),false);
-        assertEquals(Methods.fourthTask("a"),true);
+        assertTrue(Methods.fourthTask("abcba"));
+        assertFalse(Methods.fourthTask("abcde"));
+        assertTrue(Methods.fourthTask("a"));
+    }
+
+    @Test
+    public void testFifthTask(){
+        String string1 = "Abc";
+        String string2 = "abc";
+        String string3 = "Bac";
+        assertTrue(Methods.fifthTask(string1, string2));
+        assertFalse(Methods.fifthTask(string2, string3));
+        assertFalse(Methods.fifthTask(string1, null));
+        assertFalse(Methods.fifthTask(null, null));
     }
 }
