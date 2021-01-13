@@ -356,7 +356,7 @@ public class Array {
         return array;
     }
 
-    public static int[][] ThirtiethArray(int size) {
+    public static int[][] thirtiethArray(int size) {
         int[][] array = new int[size][];
         int k = 1;
         for (int i = 0; i < size; i++) {
@@ -369,13 +369,19 @@ public class Array {
         return array;
     }
 
-    public static void ThirtySecondArray(Double[] array){
+    public static void thirtySecondArray(Double[] array){
         for (Double i : array) {
             if (i.isNaN()) {
                 return;
             } else {
                 Arrays.sort(array);
             }
+        }
+    }
+
+    public static void thirtyThirdArray(String[] array){
+        for (String i : array) {
+            System.out.print(i);
         }
     }
 }
