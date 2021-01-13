@@ -196,4 +196,13 @@ public class ArrayTest {
         assertEquals(array3[2], 11, 0.001);
         assertEquals(array3[3], 7, 0.001);
     }
+
+    @Test
+    public void testTwentySeventhArray(){
+        int[] array = new int[]{1, 2, 3, 4, 5, 6};
+        boolean[] array2 = Array.twentySeventhArray(array);
+        assertEquals(array2.length, 6, 0.001);
+        assertTrue(array2[1]);
+        assertFalse(array2[2]);
+    }
 }

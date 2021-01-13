@@ -324,4 +324,12 @@ public class Array {
         }
         return array;
     }
+
+    public static boolean[] twentySeventhArray(int[] numbers){
+        boolean[] array = new boolean[numbers.length];
+        for(int i = 0; i < numbers.length; i++){
+            array[i] = numbers[i] % 2 == 0;
+        }
+        return array;
+    }
 }
