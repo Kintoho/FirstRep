@@ -223,4 +223,9 @@ public class ArrayTest {
         assertEquals(Array.twentyNinthArray(4, 2), new int[]{3,4,1,2});
     }
 
+    @Test
+    public void testThirtiethArray(){
+        assertEquals(Array.ThirtiethArray(3), new int[][]{{1, 2, 3}, {4,5}, {6}});
+    }
+
 }
