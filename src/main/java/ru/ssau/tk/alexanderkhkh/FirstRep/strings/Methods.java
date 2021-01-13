@@ -14,4 +14,11 @@ public class Methods {
             System.out.println(i);
         }
     }
+
+    public static void thirdTask(){
+        String string = "abcde";
+        String string1 = new String(string);
+        System.out.println(string==string1);
+        System.out.println(string.equals(string1));
+    }
 }

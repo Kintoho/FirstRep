@@ -21,4 +21,9 @@ public class MethodsTest {
         String string2 = "абвгд";
         Methods.secondTask(string2);
     }
+
+    @Test
+    public void testThirdTask(){
+        Methods.thirdTask();
+    }
 }
