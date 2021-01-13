@@ -228,4 +228,18 @@ public class ArrayTest {
         assertEquals(Array.ThirtiethArray(3), new int[][]{{1, 2, 3}, {4,5}, {6}});
     }
 
+    @Test
+    public void testThirtySecondArray() {
+        Double[] array = new Double[]{Double.NaN, 1., 2.};
+        Double[] array2 = new Double[]{1., 5., 3., 4.};
+        Array.ThirtySecondArray(array);
+        assertEquals(array[1], 1.);
+        assertEquals(array[0], Double.NaN);
+        Array.ThirtySecondArray(array2);
+        assertEquals(array2[0], 1.);
+        assertEquals(array2[1], 3.);
+        assertEquals(array2[2], 4.);
+
+    }
+
 }

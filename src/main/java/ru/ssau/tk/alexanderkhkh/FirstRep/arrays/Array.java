@@ -1,6 +1,7 @@
 package ru.ssau.tk.alexanderkhkh.FirstRep.arrays;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import static java.util.Arrays.sort;
 
@@ -366,5 +367,15 @@ public class Array {
             }
         }
         return array;
+    }
+
+    public static void ThirtySecondArray(Double[] array){
+        for (Double i : array) {
+            if (i.isNaN()) {
+                return;
+            } else {
+                Arrays.sort(array);
+            }
+        }
     }
 }
