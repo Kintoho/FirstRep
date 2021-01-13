@@ -218,4 +218,9 @@ public class ArrayTest {
         assertEquals(Array.twentyEighthFirstArray(Array.twentyEighthSecondArray(new int[]{0, 15})), new int[]{0, 15});
     }
 
+    @Test
+    public void testTwentyNinthArray(){
+        assertEquals(Array.twentyNinthArray(4, 2), new int[]{3,4,1,2});
+    }
+
 }

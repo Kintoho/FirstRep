@@ -340,4 +340,18 @@ public class Array {
     public static long twentyEighthSecondArray(int[] numbers){
         return ((long) numbers[0] << 32) | ((long) numbers[1] & 4294967295L);
     }
+
+    public static int[] twentyNinthArray(int size, int k){
+        int[] array = new int[size];
+        int t = 1;
+        for(int i = k; i < size; i++){
+            array[i] = t;
+            t++;
+        }
+        for(int i = 0; i < k; i++){
+            array[i] = t;
+            t++;
+        }
+        return array;
+    }
 }
