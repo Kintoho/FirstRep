@@ -7,4 +7,11 @@ public class Methods {
             System.out.println(string.charAt(i));
         }
     }
+
+    public static void secondTask(String string){
+        byte[] bytes = string.getBytes();
+        for (byte i:bytes) {
+            System.out.println(i);
+        }
+    }
 }

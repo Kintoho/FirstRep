@@ -12,4 +12,13 @@ public class MethodsTest {
         String string = ("abcde");
         Methods.firstTask(string);
     }
+
+    @Test
+    public void testSecondTask(){
+        String string1 = "abcde";
+        Methods.secondTask(string1);
+        System.out.println("\n");
+        String string2 = "абвгд";
+        Methods.secondTask(string2);
+    }
 }
