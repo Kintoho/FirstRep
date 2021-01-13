@@ -26,4 +26,11 @@ public class MethodsTest {
     public void testThirdTask(){
         Methods.thirdTask();
     }
+
+    @Test
+    public void testFourthTask(){
+        assertEquals(Methods.fourthTask("abcba"),true);
+        assertEquals(Methods.fourthTask("abcde"),false);
+        assertEquals(Methods.fourthTask("a"),true);
+    }
 }

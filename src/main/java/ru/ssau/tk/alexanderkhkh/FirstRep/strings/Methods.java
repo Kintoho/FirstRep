@@ -21,4 +21,8 @@ public class Methods {
         System.out.println(string==string1);
         System.out.println(string.equals(string1));
     }
+
+    public static boolean fourthTask(String string){
+        return string.equals(new StringBuilder(string).reverse().toString());
+    }
 }
