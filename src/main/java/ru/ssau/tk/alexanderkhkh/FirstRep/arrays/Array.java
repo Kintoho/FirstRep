@@ -384,4 +384,15 @@ public class Array {
             System.out.print(i);
         }
     }
+
+    public static Double thirtyFourthArray(Double[] array){
+        double number = 1;
+        for (Double i : array) {
+            if(i.isNaN() || i.isInfinite() || i == null || i == 0){
+                continue;
+            }
+            number*=i;
+        }
+        return number;
+    }
 }

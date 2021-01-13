@@ -246,4 +246,10 @@ public class ArrayTest {
         String[] array = new String[]{"<","3"};
         Array.thirtyThirdArray(array);
     }
+
+    @Test
+    public void testThirtyFourthArray(){
+        Double[] array = new Double[]{Double.NaN, 1., 2., 3., 4., Double.POSITIVE_INFINITY};
+        assertEquals(Array.thirtyFourthArray(array), 24, 0.001);
+    }
 }
