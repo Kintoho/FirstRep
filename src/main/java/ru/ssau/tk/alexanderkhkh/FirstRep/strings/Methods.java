@@ -31,4 +31,15 @@ public class Methods {
     public static boolean fifthTask(String string1, String string2){
         return !Objects.equals(null, string1) && !Objects.equals(null, string2) && !string1.equals(string2) && string1.equalsIgnoreCase(string2);
     }
+
+    public static void sixthTask(){
+        int i = 0;
+        System.out.println("Символ\t№" + ++i); // табуляция
+        System.out.println("Символ\b№" + ++i); // удаление одного символа
+        System.out.println("Символ\n№" + ++i); // переход на новую строку
+        System.out.println("Символ\r№" + ++i); // вовзращение к началу строки
+        System.out.println("Символ\'№" + ++i); // апостроф
+        System.out.println("Символ\"№" + ++i); // ковычки
+        System.out.println("Символ\\№" + ++i); // знак \
+    }
 }

@@ -43,4 +43,9 @@ public class MethodsTest {
         assertFalse(Methods.fifthTask(string1, null));
         assertFalse(Methods.fifthTask(null, null));
     }
+
+    @Test
+    public void testSixthTask(){
+        Methods.sixthTask();
+    }
 }
