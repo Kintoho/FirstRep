@@ -332,4 +332,12 @@ public class Array {
         }
         return array;
     }
+
+    public static int[] twentyEighthFirstArray(long number){
+        return new int[]{(int) (number >>> 32), (int) (number)};
+    }
+
+    public static long twentyEighthSecondArray(int[] numbers){
+        return ((long) numbers[0] << 32) | ((long) numbers[1] & 4294967295L);
+    }
 }

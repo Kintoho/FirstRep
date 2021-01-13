@@ -205,4 +205,17 @@ public class ArrayTest {
         assertTrue(array2[1]);
         assertFalse(array2[2]);
     }
+
+    @Test
+    public void testTwentyEighthFirstArray(){
+        assertEquals(Array.twentyEighthFirstArray((long) 15.321), new int[]{0, 15});
+        assertEquals(Array.twentyEighthSecondArray(Array.twentyEighthFirstArray((long) 300054332133.9)), (long)300054332133.9);
+    }
+
+    @Test
+    public void testTwentyEighthSecondArray(){
+        assertEquals(Array.twentyEighthSecondArray(new int[]{0, 15}), 15);
+        assertEquals(Array.twentyEighthFirstArray(Array.twentyEighthSecondArray(new int[]{0, 15})), new int[]{0, 15});
+    }
+
 }
