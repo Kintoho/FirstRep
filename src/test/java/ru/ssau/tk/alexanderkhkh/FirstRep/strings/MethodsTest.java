@@ -85,4 +85,13 @@ public class MethodsTest {
     public void testTwelfthTask(){
         assertEquals(Methods.twelfthTask("opopopopo", "opo", "po"), "popppo");
     }
+
+    @Test
+    public void testThirtiethTask(){
+        String string = "Hello world hello world";
+        int size = string.length();
+        assertEquals(Methods.thirtiethTask(string, -2, size), string);
+        assertEquals(Methods.thirtiethTask(string, 2, 1), "");
+        assertEquals(Methods.thirtiethTask(string, 0, 5), "Hello");
+    }
 }
