@@ -66,4 +66,11 @@ public class MethodsTest {
         assertEquals(Methods.ninthTask("abcde","cde"),2);
         assertEquals(Methods.ninthTask("Hello","ll"),2);
     }
+
+    @Test
+    public void testTenthTask(){
+        String[] strings = new String[]{"abcabc","abababa","a","arr", "acer"};
+        assertEquals(Methods.tenthTask(strings,"a","a"),2);
+        assertEquals(Methods.tenthTask(strings,"a","r"),2);
+    }
 }

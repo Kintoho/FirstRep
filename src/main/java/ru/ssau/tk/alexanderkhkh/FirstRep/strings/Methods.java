@@ -63,4 +63,14 @@ public class Methods {
         }
         return string1.lastIndexOf(string2,string1.length()/2);
     }
+
+    public static int tenthTask(String[] strings, String prefix, String postfix){
+        int count = 0;
+        for (String string : strings) {
+            if (string.startsWith(prefix) && string.endsWith(postfix)) {
+                count++;
+            }
+        }
+        return count;
+    }
 }
