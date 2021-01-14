@@ -38,8 +38,15 @@ public class Methods {
         System.out.println("Символ\b№" + ++i); // удаление одного символа
         System.out.println("Символ\n№" + ++i); // переход на новую строку
         System.out.println("Символ\r№" + ++i); // вовзращение к началу строки
-        System.out.println("Символ\'№" + ++i); // апостроф
+        //System.out.println("Символ\'№" + ++i); // апостроф
         System.out.println("Символ\"№" + ++i); // ковычки
         System.out.println("Символ\\№" + ++i); // знак \
+    }
+
+    public static int seventhTask(String string1, String string2){
+       if (string1.indexOf(string2) == 0){
+           return -1;
+       }
+       return string1.indexOf(string2);
     }
 }

@@ -48,4 +48,10 @@ public class MethodsTest {
     public void testSixthTask(){
         Methods.sixthTask();
     }
+
+    @Test
+    public void testSeventhTask(){
+        assertEquals(Methods.seventhTask("abcabcabc","ca"),2);
+        assertEquals(Methods.seventhTask("abcabcabc","lolo"),-1);
+    }
 }
