@@ -145,4 +145,9 @@ public class Methods {
     public static void main(String[] args) {
         System.out.println(Charset.defaultCharset());
     }
+
+    public static void twentyFourthTask(String string, Charset CharSet1, Charset charSet2){
+        String string2 = new String(string.getBytes(CharSet1), charSet2);
+        System.out.println(string2);
+    }
 }

@@ -2,6 +2,8 @@ package ru.ssau.tk.alexanderkhkh.FirstRep.strings;
 
 import org.testng.annotations.Test;
 
+import java.nio.charset.StandardCharsets;
+
 import static org.testng.Assert.*;
 
 public class MethodsTest {
@@ -121,5 +123,12 @@ public class MethodsTest {
     public void testTwentySecondTask(){
         assertEquals(Methods.twentySecondTask(4),"0123");
         System.out.println(Methods.twentySecondTask(10000));
+    }
+
+    @Test
+    public void testTwentyFourthTask() {
+        String string = "hello world";
+        Methods.twentyFourthTask(string, StandardCharsets.UTF_8, StandardCharsets.UTF_16LE);
+        Methods.twentyFourthTask(string,StandardCharsets.UTF_16LE,StandardCharsets.UTF_8);
     }
 }
