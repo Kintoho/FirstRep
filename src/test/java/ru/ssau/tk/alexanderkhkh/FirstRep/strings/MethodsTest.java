@@ -103,4 +103,10 @@ public class MethodsTest {
             System.out.print(strings + " ");
         }
     }
+
+    @Test
+    public void testTwentiethTask(){
+        String[] string = {"A", "B", "C"};
+        assertEquals(Methods.twentiethTask(string), "A, B, C");
+    }
 }

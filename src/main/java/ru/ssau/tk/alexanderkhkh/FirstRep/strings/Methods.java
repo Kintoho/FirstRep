@@ -117,4 +117,8 @@ public class Methods {
         strings[0] = strings[0].substring(0, 1).toUpperCase() + strings[0].substring(1);
         return strings;
     }
+
+    public static String twentiethTask(String[] array) {
+        return String.join(", ", array);
+    }
 }
