@@ -94,4 +94,13 @@ public class MethodsTest {
         assertEquals(Methods.thirtiethTask(string, 2, 1), "");
         assertEquals(Methods.thirtiethTask(string, 0, 5), "Hello");
     }
+
+    @Test
+    public void testNineteenthTask(){
+        String string = "hello world!";
+        String[] arrayString = Methods.nineteenthTask(string);
+        for (String strings : arrayString) {
+            System.out.print(strings + " ");
+        }
+    }
 }
