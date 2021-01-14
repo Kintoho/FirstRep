@@ -121,4 +121,15 @@ public class Methods {
     public static String twentiethTask(String[] array) {
         return String.join(", ", array);
     }
+
+    public static String twentyFirstTask(String string) {
+        StringBuilder stringBuilder = new StringBuilder(string);
+        for (int i = 0; i < string.length(); i++) {
+            if (i % 2 == 0) {
+                stringBuilder.replace(i, i + 1, i + "");
+            }
+        }
+        stringBuilder.reverse();
+        return stringBuilder.toString();
+    }
 }

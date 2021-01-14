@@ -109,4 +109,11 @@ public class MethodsTest {
         String[] string = {"A", "B", "C"};
         assertEquals(Methods.twentiethTask(string), "A, B, C");
     }
+
+    @Test
+    public void testTwentyFirstTask(){
+        String string = "hello word!";
+        System.out.println(Methods.twentyFirstTask(string));
+        assertEquals(Methods.twentyFirstTask(string), "01d8o6 4l2e0");
+    }
 }
