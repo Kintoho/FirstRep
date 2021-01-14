@@ -28,4 +28,14 @@ public class Exception {
         }
         return newString;
     }
+
+    public static char thirdTask(String[] arrayString, int n, int m) {
+        if (n > arrayString.length) {
+            throw new StringIndexOutOfBoundsException();
+        }
+        if (m > arrayString.length) {
+            throw new ArrayIndexOutOfBoundsException();
+        }
+        return arrayString[n].charAt(m);
+    }
 }

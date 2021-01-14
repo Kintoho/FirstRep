@@ -1,6 +1,5 @@
 package ru.ssau.tk.alexanderkhkh.FirstRep.exceptions;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.ssau.tk.alexanderkhkh.FirstRep.Person;
 import static org.testng.Assert.*;
@@ -28,5 +27,16 @@ public class ExceptionTest {
         String[] string1 = {null, "null"};
         assertThrows(NullPointerException.class,
                 () -> assertNull(Exception.secondTask(string1, 0)));
+    }
+
+    @Test
+    public void testThirdTask(){
+        String[] arrayStr = new String[]{"Hello","world","!"};
+        assertEquals(Exception.thirdTask(arrayStr,0,0),
+                'H');
+        assertThrows(StringIndexOutOfBoundsException.class,
+                () -> Exception.thirdTask(arrayStr,20,0));
+        assertThrows(ArrayIndexOutOfBoundsException.class,
+                () -> Exception.thirdTask(arrayStr,0,20));
     }
 }
