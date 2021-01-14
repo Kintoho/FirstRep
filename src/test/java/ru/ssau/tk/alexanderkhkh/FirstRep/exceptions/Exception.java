@@ -38,4 +38,14 @@ public class Exception {
         }
         return arrayString[n].charAt(m);
     }
+
+    public static int fourthTask(String string1, String string2) {
+        if (Integer.parseInt(string2) == 0) {
+            throw new ArithmeticException();
+        }
+        if (!Character.isDigit(string1.charAt(0)) || !Character.isDigit(string2.charAt(0))) {
+            throw new NumberFormatException();
+        }
+        return Integer.parseInt(string1) / Integer.parseInt(string2);
+    }
 }

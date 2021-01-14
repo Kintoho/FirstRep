@@ -39,4 +39,15 @@ public class ExceptionTest {
         assertThrows(ArrayIndexOutOfBoundsException.class,
                 () -> Exception.thirdTask(arrayStr,0,20));
     }
+
+    @Test
+    public void testGetIntOfString() {
+        assertEquals(Exception.fourthTask("10","5"), 2, 0.001);
+        assertThrows(ArithmeticException.class,
+                () ->   Exception.fourthTask("10","0"));
+        assertThrows(NumberFormatException.class,
+                () ->    Exception.fourthTask("a","1"));
+        assertThrows(NumberFormatException.class,
+                () ->    Exception.fourthTask("a","b"));
+    }
 }
