@@ -1,5 +1,7 @@
 package ru.ssau.tk.alexanderkhkh.FirstRep.arrays;
 
+import ru.ssau.tk.alexanderkhkh.FirstRep.exceptions.IncompatibleDimensionsException;
+
 public class Matrices {
 
     public static Matrix getMatrixMultiplyOnNumber(Matrix matrix, int number) {
@@ -13,9 +15,9 @@ public class Matrices {
     }
 
     public static Matrix getMatrixPlus(Matrix matrix1, Matrix matrix2) {
-        Matrix resultMatrix = new Matrix(matrix1.getN(), matrix1.getM());
+        Matrix resultMatrix = new Matrix(matrix1.getN(), matrix1.getN());
         if (checkMatrixSize(matrix1, matrix2)) {
-            return null;
+            throw new IncompatibleDimensionsException();
         } else for (int i = 0; i < matrix1.getN(); i++) {
             for (int j = 0; j < matrix1.getM(); j++)
                 resultMatrix.setAt(i, j, matrix1.getAt(i, j) + matrix2.getAt(i, j));
@@ -25,13 +27,13 @@ public class Matrices {
 
 
     public static boolean checkMatrixSize(Matrix matrix1, Matrix matrix2) {
-        return !(matrix1.getM() == matrix2.getM() || matrix1.getN() == matrix2.getM());
+        return !(matrix1.getM() == matrix2.getM() && matrix1.getN() == matrix2.getN());
     }
 
     public static Matrix getMatrixMultiply(Matrix matrix1, Matrix matrix2) {
         Matrix resultMatrix = new Matrix(matrix1.getN(), matrix1.getM());
         if (checkMatrixSize(matrix1, matrix2)) {
-            return null;
+            throw new IncompatibleDimensionsException();
         } else {
             for (int i = 0; i < matrix1.getN(); i++) {
                 for (int j = 0; j < matrix1.getN(); j++) {
