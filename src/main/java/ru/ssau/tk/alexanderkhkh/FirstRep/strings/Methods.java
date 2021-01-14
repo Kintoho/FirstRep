@@ -132,4 +132,12 @@ public class Methods {
         stringBuilder.reverse();
         return stringBuilder.toString();
     }
+
+    public static String twentySecondTask(int number) {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < number; i++) {
+            stringBuilder.append(i);
+        }
+        return stringBuilder.toString();
+    }
 }

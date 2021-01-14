@@ -116,4 +116,10 @@ public class MethodsTest {
         System.out.println(Methods.twentyFirstTask(string));
         assertEquals(Methods.twentyFirstTask(string), "01d8o6 4l2e0");
     }
+
+    @Test
+    public void testTwentySecondTask(){
+        assertEquals(Methods.twentySecondTask(4),"0123");
+        System.out.println(Methods.twentySecondTask(10000));
+    }
 }
