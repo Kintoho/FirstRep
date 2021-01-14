@@ -86,4 +86,16 @@ public class Methods {
         }
         return count;
     }
+
+    public static String twelfthTask(String string1, String string2, String string3){
+        for (int i = 0; i < 100; i++) {
+            if (string1.contains(string2)) {
+                string1 = string1.replaceAll(string2, string3);
+            } else {
+                break;
+            }
+            i++;
+        }
+        return string1;
+    }
 }

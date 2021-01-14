@@ -80,4 +80,9 @@ public class MethodsTest {
         assertEquals(Methods.eleventhTask(strings,"a","a"),2);
         assertEquals(Methods.eleventhTask(strings,"a","r"),2);
     }
+
+    @Test
+    public void testTwelfthTask(){
+        assertEquals(Methods.twelfthTask("opopopopo", "opo", "po"), "popppo");
+    }
 }
