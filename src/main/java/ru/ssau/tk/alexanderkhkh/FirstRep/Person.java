@@ -19,6 +19,11 @@ public class Person {
     public Person(){
     }
 
+    @Override
+    public String toString() {
+        return firstName + (firstName.isEmpty() || lastName.isEmpty() ? "" : " ") + lastName;
+    }
+
     public Person(int passportID){
         this.passportID = passportID;
     }

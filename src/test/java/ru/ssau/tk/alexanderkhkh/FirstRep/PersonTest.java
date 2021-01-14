@@ -53,5 +53,11 @@ public class PersonTest {
 
         Person Vasya = new Person("Vasya", "Maksimov", Person.Gender.Male);
         assertEquals(Vasya.getGender(), Person.Gender.Male);
+
+        assertEquals(Sasha.toString(), "Alexander Khkhlv");
+        Sasha.setLastName("");
+        assertEquals(Sasha.toString(), "Alexander");
+        Sasha.setFirstName("");
+        assertEquals(Sasha.toString(), "");
     }
 }
