@@ -73,4 +73,17 @@ public class Methods {
         }
         return count;
     }
+
+    public static int eleventhTask(String[] strings, String prefix, String postfix){
+        int count = 0;
+        for (int i = 0; i < strings.length; i++) {
+            strings[i] = strings[i].trim();
+        }
+        for (String string : strings) {
+            if (string.startsWith(prefix) && string.endsWith(postfix)) {
+                count++;
+            }
+        }
+        return count;
+    }
 }
