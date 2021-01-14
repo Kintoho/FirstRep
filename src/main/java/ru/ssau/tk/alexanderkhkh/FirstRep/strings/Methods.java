@@ -1,5 +1,6 @@
 package ru.ssau.tk.alexanderkhkh.FirstRep.strings;
 
+import java.nio.charset.Charset;
 import java.util.Objects;
 
 public class Methods {
@@ -139,5 +140,9 @@ public class Methods {
             stringBuilder.append(i);
         }
         return stringBuilder.toString();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Charset.defaultCharset());
     }
 }
