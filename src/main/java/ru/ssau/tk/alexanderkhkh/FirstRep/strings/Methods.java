@@ -49,4 +49,11 @@ public class Methods {
        }
        return string1.indexOf(string2);
     }
+
+    public static int eighthTask(String string1, String string2){
+        if(string1.indexOf(string2,string1.length()/2) == 0){
+            return -1;
+        }
+        return string1.indexOf(string2,string1.length()/2);
+    }
 }
