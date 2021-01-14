@@ -60,4 +60,10 @@ public class MethodsTest {
         assertEquals(Methods.eighthTask("abcabcabc","ca"), 5);
         assertEquals(Methods.seventhTask("abcabcabc","lolo"),-1);
     }
+
+    @Test
+    public void testNinthTask(){
+        assertEquals(Methods.ninthTask("abcde","cde"),2);
+        assertEquals(Methods.ninthTask("Hello","ll"),2);
+    }
 }

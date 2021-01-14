@@ -56,4 +56,11 @@ public class Methods {
         }
         return string1.indexOf(string2,string1.length()/2);
     }
+
+    public static int ninthTask(String string1, String string2){
+        if(string1.lastIndexOf(string2,string1.length()/2) == 0){
+            return -1;
+        }
+        return string1.lastIndexOf(string2,string1.length()/2);
+    }
 }
