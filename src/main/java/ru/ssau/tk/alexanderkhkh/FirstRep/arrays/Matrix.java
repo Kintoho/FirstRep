@@ -1,6 +1,22 @@
 package ru.ssau.tk.alexanderkhkh.FirstRep.arrays;
 
+import java.util.StringJoiner;
+
 public class Matrix {
+
+    @Override
+    public String toString() {
+        StringJoiner columnMatrix = new StringJoiner(";\n");
+        StringJoiner lineMatrix = new StringJoiner(",");
+        for (double[] lineArray : array) {
+            for (double element : lineArray) {
+                lineMatrix.add(element + "");
+            }
+            columnMatrix.add(lineMatrix.toString());
+            lineMatrix = new StringJoiner(",");
+        }
+        return columnMatrix.toString() + ";";
+    }
 
     private final double[][] array;
     private final int n;
