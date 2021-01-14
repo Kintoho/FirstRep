@@ -10,4 +10,22 @@ public class Exception {
         }
         return obj.toString();
     }
+
+    public static String[] secondTask(String[] string, int n) {
+        String[] newString = new String[string.length];
+        for (String s : string) {
+            if (n > s.length()) {
+                throw new StringIndexOutOfBoundsException();
+            }
+        }
+        for (String s : string) {
+            if (s == null) {
+                throw new NullPointerException();
+            }
+        }
+        for (int i = 0; i < string.length; i++) {
+            newString[i] = string[i].substring(n, n + 1);
+        }
+        return newString;
+    }
 }
