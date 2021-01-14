@@ -2,6 +2,8 @@ package ru.ssau.tk.alexanderkhkh.FirstRep;
 
 import ru.ssau.tk.alexanderkhkh.FirstRep.generator.Resettable;
 
+import java.util.Objects;
+
 public class NamedPoint extends Point implements Resettable {
     public  String name;
 
@@ -11,6 +13,12 @@ public class NamedPoint extends Point implements Resettable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        if (Objects.equals(null, name)) return super.toString();
+        return name + ": " + super.toString();
     }
 
     public NamedPoint(){
