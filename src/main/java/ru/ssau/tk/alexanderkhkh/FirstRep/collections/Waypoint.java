@@ -4,6 +4,11 @@ public class Waypoint extends Location {
     private WaypointType type;
     private Settlement settlement;
 
+    @Override
+    public String toString() {
+        return "Waypoint. Type: " + type + "; name: " + getName() + "; latitude: " + getLatitude() + "; longitude: " + getLongitude();
+    }
+
     public Settlement getSettlement() {
         return settlement;
     }

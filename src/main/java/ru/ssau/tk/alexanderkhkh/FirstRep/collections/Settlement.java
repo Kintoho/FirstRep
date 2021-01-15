@@ -4,6 +4,11 @@ public class Settlement extends Location {
     private int settlement;
     private SettlementType type;
 
+    @Override
+    public String toString() {
+        return "Settlement. Type: " + type + "; name: " + getName() + "; latitude: " + getLatitude() + "; longitude: " + getLongitude();
+    }
+
     public int getSettlement() {
         return settlement;
     }
