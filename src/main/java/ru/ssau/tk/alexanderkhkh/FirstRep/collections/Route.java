@@ -3,9 +3,30 @@ package ru.ssau.tk.alexanderkhkh.FirstRep.collections;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Objects;
 
 public class Route implements Iterable<Location> {
     private List<Location> locations = new ArrayList<>();
+
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+        Route route = (Route) object;
+        List<Location> objectLocations = route.getLocation();
+        if (objectLocations.size() != this.locations.size()) return false;
+        for (int i = 0; i < locations.size(); i++) {
+            if (!(objectLocations.get(i).equals(locations.get(i)))) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(locations);
+    }
 
     public List<Location> getLocation() {
         return locations;

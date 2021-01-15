@@ -1,6 +1,7 @@
 package ru.ssau.tk.alexanderkhkh.FirstRep.collections;
 
 import org.testng.annotations.Test;
+import ru.ssau.tk.alexanderkhkh.FirstRep.Person;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -157,5 +158,53 @@ public class RouteTest {
 
         route2.remove(location2);
         assertEquals(route2.getLocation(), new ArrayList<>(Arrays.asList(location, location3)));
+    }
+
+    @Test
+    public void testEquals() {
+        Route route = new Route();
+        Route equalRoute = new Route();
+        Route notEqualRoute = new Route();
+        Person person = new Person();
+        Location city1 = new Settlement();
+        Location city2 = new Settlement();
+
+        Location newVillage1 = new Settlement();
+        Location depot1 = new Waypoint();
+        Location warehouse = new Waypoint();
+        Location depot2 = new Waypoint();
+        city1.setId(1);
+        city2.setId(2);
+        newVillage1.setId(1);
+        depot1.setId(3);
+        warehouse.setId(4);
+        depot2.setId(1);
+
+        route.addLocation(city1);
+        route.addLocation(city2);
+        route.addLocation(depot1);
+        route.addLocation(warehouse);
+
+        equalRoute.addLocation(newVillage1);
+        equalRoute.addLocation(city2);
+        equalRoute.addLocation(depot1);
+        equalRoute.addLocation(warehouse);
+
+        notEqualRoute.addLocation(city1);
+        notEqualRoute.addLocation(city1);
+        notEqualRoute.addLocation(depot1);
+        notEqualRoute.addLocation(warehouse);
+
+        assertTrue(route.equals(equalRoute));
+        assertFalse(route.equals(notEqualRoute));
+        assertFalse(route.equals(person));
+
+        equalRoute.remove(warehouse);
+        assertFalse(route.equals(equalRoute));
+
+        equalRoute.addLocation(warehouse);
+        equalRoute.removeLocation(0);
+        equalRoute.addLocation(depot2);
+        assertFalse(route.equals(equalRoute));
     }
 }
