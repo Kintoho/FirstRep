@@ -57,7 +57,7 @@ public class CompanyModelTest {
 
 
         companyModel2.addSettlement("village1", 20.36, 45.12, Location.SettlementType.VILLAGE, 1200);
-        companyModel2.addSettlement("village2", 20.45, 45.81, Location.SettlementType.VILLAGE, 540);
+        companyModel2.addSettlement("village2", 20.45, 48.81, Location.SettlementType.VILLAGE, 540);
         companyModel2.addSettlement("city1", 20.47, 46.01, Location.SettlementType.CITY, 1250000);
         companyModel2.addSettlement("city2", 21.87, 45.84, Location.SettlementType.CITY, 384000);
         companyModel2.addWaypoint("city1.Depot", 20.47, 46.01, Location.WaypointType.DEPOT, city1);
@@ -195,5 +195,13 @@ public class CompanyModelTest {
         assertEquals(mapOne.get(Paul), route2);
         assertEquals(mapTwo.get(Alina), route3);
         assertEquals(mapTwo.get(Stepan), route4);
+    }
+
+    @Test
+    public void testRouteComparator() {
+        fillModels();
+        List<Route> routes = new ArrayList<>(Arrays.asList(route1, route2, route3, route4));
+        Collections.sort(routes);
+        assertEquals(routes, new ArrayList<>(Arrays.asList(route2, route4, route1, route3)));
     }
 }
