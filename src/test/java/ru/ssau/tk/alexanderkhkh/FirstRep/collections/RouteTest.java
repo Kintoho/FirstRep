@@ -241,4 +241,29 @@ public class RouteTest {
         equalRoute.addLocation(depot2);
         assertFalse(route.equals(equalRoute));
     }
+
+    @Test
+    public void testLength() {
+        Route route = new Route();
+        Location village = new Settlement();
+        Location city = new Settlement();
+        Location depot = new Waypoint();
+        Location warehouse = new Waypoint();
+        village.setLatitude(60.);
+        city.setLatitude(70.);
+        depot.setLatitude(75.);
+        warehouse.setLatitude(50.);
+        village.setLongitude(66.);
+        city.setLongitude(44.);
+        depot.setLongitude(55.);
+        warehouse.setLongitude(77.);
+        route.addLocation(city);
+        route.addLocation(village);
+        route.addLocation(depot);
+        route.addLocation(warehouse);
+        assertEquals(route.length(), 76., 0.1);
+        route.addLocation(city);
+        route.removeLocation(2);
+        assertEquals(route.length(), 77.6, 0.1);
+    }
 }
