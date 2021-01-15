@@ -2,7 +2,7 @@ package ru.ssau.tk.alexanderkhkh.FirstRep.collections;
 
 import org.testng.annotations.Test;
 import ru.ssau.tk.alexanderkhkh.FirstRep.Person;
-
+import static org.testng.Assert.*;
 import java.util.*;
 
 
@@ -19,26 +19,25 @@ public class CompanyModelTest {
     Waypoint city1Depot = new Waypoint();
     Waypoint city2Warehouse = new Waypoint();
     Waypoint loneDepot = new Waypoint();
+    Driver Alexander = new Driver();
+    Driver Paul = new Driver();
+    Driver Alina = new Driver();
+    Driver Stepan = new Driver();
+    Route route1 = new Route();
+    Route route2 = new Route();
+    Route route3 = new Route();
+    Route route4 = new Route();
 
     private void fillModels() {
-        village1.setName("village1");
-        village1.setType(Location.SettlementType.VILLAGE);
-        village2.setName("village2");
-        village2.setType(Location.SettlementType.VILLAGE);
-        city1.setName("city1");
-        city1.setType(Location.SettlementType.CITY);
-        city2.setName("city2");
-        city2.setType(Location.SettlementType.CITY);
-        village1Warehouse.setName("village1.Warehouse");
-        village1Warehouse.setType(Location.WaypointType.WAREHOUSE);
-        village2Waypoint.setName("village2.Waypoint");
-        village2Waypoint.setType(Location.WaypointType.EMPTY);
-        city1Depot.setName("city1.Depot");
-        city1Depot.setType(Location.WaypointType.DEPOT);
-        city2Warehouse.setName("city2.Warehouse");
-        city2Warehouse.setType(Location.WaypointType.WAREHOUSE);
-        loneDepot.setName("lone Depot");
-        loneDepot.setType(Location.WaypointType.DEPOT);
+        village1 = companyModel1.addSettlement("village1", 20.36, 45.12, Location.SettlementType.VILLAGE, 1200);
+        village2 = companyModel1.addSettlement("village2", 20.45, 45.81, Location.SettlementType.VILLAGE, 540);
+        city1 = companyModel1.addSettlement("city1", 20.47, 46.01, Location.SettlementType.CITY, 1250000);
+        city2 = companyModel1.addSettlement("city2", 21.87, 45.84, Location.SettlementType.CITY, 384000);
+        village1Warehouse = companyModel1.addWaypoint("village1.Warehouse", 20.36, 45.12, Location.WaypointType.WAREHOUSE, village1);
+        village2Waypoint = companyModel1.addWaypoint("village2.Waypoint", 20.36, 45.12, Location.WaypointType.EMPTY, village2);
+        city1Depot = companyModel1.addWaypoint("city1.Depot", 20.47, 46.01, Location.WaypointType.DEPOT, city1);
+        loneDepot = companyModel1.addWaypoint("lone Depot", 20.54, 45.85, Location.WaypointType.DEPOT, null);
+        city2Warehouse = companyModel1.addWaypoint("city2.Warehouse", 21.87, 45.84, Location.WaypointType.WAREHOUSE, city2);
 
         companyModel1.addSettlement("village1", 20.36, 45.12, Location.SettlementType.VILLAGE, 1200);
         companyModel1.addSettlement("village2", 20.45, 45.81, Location.SettlementType.VILLAGE, 540);
@@ -49,13 +48,13 @@ public class CompanyModelTest {
         companyModel1.addWaypoint("city1.Depot", 20.47, 46.01, Location.WaypointType.DEPOT, city1);
         companyModel1.addWaypoint("lone Depot", 20.54, 45.85, Location.WaypointType.DEPOT, null);
         companyModel1.addWaypoint("city2.Warehouse", 21.87, 45.84, Location.WaypointType.WAREHOUSE, city2);
-        companyModel1.addDriver("Alexander", Person.Gender.Male, new Date(121, Calendar.APRIL, 21));
-        companyModel1.addDriver("Paul", Person.Gender.Male, new Date(127, Calendar.DECEMBER, 5));
-        companyModel1.addDriver("Dasha", Person.Gender.Female, new Date(135, Calendar.AUGUST, 16));
-        companyModel1.addDriver("Misha", Person.Gender.Male, new Date(140, Calendar.JANUARY, 2));
-        companyModel1.addRoute(new ArrayList<>(Arrays.asList(city1Depot, city1, village2Waypoint, village1Warehouse, city2Warehouse, loneDepot)));
-        companyModel1.addRoute(new ArrayList<>(Arrays.asList(city1Depot, city1, city2, city2Warehouse, loneDepot)));
-        companyModel1.addRoute(new ArrayList<>(Arrays.asList(loneDepot, village2, village2Waypoint, village1Warehouse, city1, city1Depot)));
+        Alexander = companyModel1.addDriver("Alexander", Person.Gender.Male, new Date(101, Calendar.JUNE, 21));
+        Paul = companyModel1.addDriver("Paul", Person.Gender.Male, new Date(100, Calendar.DECEMBER, 5));
+        route1 = companyModel1.addRoute(new ArrayList<>(Arrays.asList(city1Depot, city1, village2Waypoint, village1Warehouse, city2Warehouse, loneDepot)));
+        route2 = companyModel1.addRoute(new ArrayList<>(Arrays.asList(city1Depot, city1, city2, city2Warehouse, loneDepot)));
+        companyModel1.assignRoute(Alexander, route1);
+        companyModel1.assignRoute(Paul, route2);
+
 
         companyModel2.addSettlement("village1", 20.36, 45.12, Location.SettlementType.VILLAGE, 1200);
         companyModel2.addSettlement("village2", 20.45, 45.81, Location.SettlementType.VILLAGE, 540);
@@ -63,25 +62,72 @@ public class CompanyModelTest {
         companyModel2.addSettlement("city2", 21.87, 45.84, Location.SettlementType.CITY, 384000);
         companyModel2.addWaypoint("city1.Depot", 20.47, 46.01, Location.WaypointType.DEPOT, city1);
         companyModel2.addWaypoint("lone Depot", 20.54, 45.85, Location.WaypointType.DEPOT, null);
-        companyModel2.addDriver("Alexander", Person.Gender.Male, new Date(121, Calendar.APRIL, 21));
-        companyModel2.addDriver("Paul", Person.Gender.Female, new Date(127, Calendar.DECEMBER, 5));
-        companyModel2.addDriver("Dasha", Person.Gender.Female, new Date(135, Calendar.AUGUST, 16));
-        companyModel2.addDriver("Misha", Person.Gender.Male, new Date(140, Calendar.JANUARY, 2));
-        companyModel2.addRoute(new ArrayList<>(Arrays.asList(city1Depot, city1, village1, village2, city2, loneDepot)));
-        companyModel2.addRoute(new ArrayList<>(Arrays.asList(loneDepot, village1, city2, city1, city1Depot)));
+        Alina = companyModel2.addDriver("Alina", Person.Gender.Female, new Date(95, Calendar.NOVEMBER, 10));
+        Stepan = companyModel2.addDriver("Stepan", Person.Gender.Male, new Date(99, Calendar.SEPTEMBER, 28));
+        route3 = companyModel2.addRoute(new ArrayList<>(Arrays.asList(city1Depot, city1, village1, village2, city2, loneDepot)));
+        route4 = companyModel2.addRoute(new ArrayList<>(Arrays.asList(loneDepot, village1, city2, city1, city1Depot)));
+        companyModel2.assignRoute(Alina, route3);
+        companyModel2.assignRoute(Stepan, route4);
     }
 
     @Test
     public void testGetAllLocations() {
+        int i = 1;
         fillModels();
-        Collection<Location> locationsOne = companyModel1.getAllLocations();
-        Collection<Location> locationsTwo = companyModel2.getAllLocations();
-        for (Location location : locationsOne) {
-            System.out.println(location.toString());
+        Collection<Location> locations1 = companyModel1.getAllLocations();
+        Collection<Location> locations2 = companyModel2.getAllLocations();
+        for (Location location : locations1) {
+            if (i == 1) {
+                assertEquals(location.toString(), village1.toString());
+            }
+            if (i == 2) {
+                assertEquals(location.toString(), village2.toString());
+            }
+            if (i == 3) {
+                assertEquals(location.toString(), city1.toString());
+            }
+            if (i == 4) {
+                assertEquals(location.toString(), city2.toString());
+            }
+            if (i == 5) {
+                assertEquals(location.toString(), village1Warehouse.toString());
+            }
+            if (i == 6) {
+                assertEquals(location.toString(), village2Waypoint.toString());
+            }
+            if (i == 7) {
+                assertEquals(location.toString(), city1Depot.toString());
+            }
+            if (i == 8) {
+                assertEquals(location.toString(), loneDepot.toString());
+            }
+            if (i == 9) {
+                assertEquals(location.toString(), city2Warehouse.toString());
+            }
+            i++;
         }
-        System.out.println("\n------------------\n");
-        for (Location location : locationsTwo) {
-            System.out.println(location.toString());
+
+        i = 1;
+        for (Location location : locations2) {
+            if (i == 1) {
+                assertEquals(location.toString(), village1.toString());
+            }
+            if (i == 2) {
+                assertEquals(location.toString(), village2.toString());
+            }
+            if (i == 3) {
+                assertEquals(location.toString(), city1.toString());
+            }
+            if (i == 4) {
+                assertEquals(location.toString(), city2.toString());
+            }
+            if (i == 5) {
+                assertEquals(location.toString(), city1Depot.toString());
+            }
+            if (i == 6) {
+                assertEquals(location.toString(), loneDepot.toString());
+            }
+            i++;
         }
     }
 
@@ -90,21 +136,64 @@ public class CompanyModelTest {
         fillModels();
         Collection<Route> routesOne = companyModel1.getAllRoutes();
         Collection<Route> routesTwo = companyModel2.getAllRoutes();
+        int i = 1;
         for (Route route : routesOne) {
-            System.out.println(route.toString());
+            if (i == 1){
+                assertEquals(route.toString(), route1.toString());
+            }
+            if (i == 2){
+                assertEquals(route.toString(), route2.toString());
+            }
+            i++;
         }
-        System.out.println("------------------\n");
+        i = 1;
         for (Route route : routesTwo) {
-            System.out.println(route.toString());
+            if (i == 3){
+                assertEquals(route.toString(), route3.toString());
+            }
+            if (i == 4){
+                assertEquals(route.toString(), route4.toString());
+            }
+            i++;
         }
     }
 
     @Test
     public void testGetAllDrivers() {
-        fillModels();
-        Collection<Driver> drivers = companyModel1.getAllDrivers();
-        for (Driver driver : drivers) {
-            System.out.println(driver.toString());
+        Collection<Driver> driversOne = companyModel1.getAllDrivers();
+        Collection<Driver> driversTwo = companyModel2.getAllDrivers();
+        int i = 1;
+        for (Driver driver : driversOne) {
+            if (i == 1) {
+                assertEquals(driver.toString(), Alexander.toString());
+            }
+            if (i == 2) {
+                assertEquals(driver.toString(), Paul.toString());
+            }
+            i++;
         }
+        i = 1;
+        for (Driver driver : driversTwo) {
+            if (i == 3) {
+                assertEquals(driver.toString(), Alina.toString());
+            }
+            if (i == 4) {
+                assertEquals(driver.toString(), Stepan.toString());
+            }
+            i++;
+        }
+    }
+
+    @Test
+    public void testAssignRoute() {
+        fillModels();
+        Map<Driver, Route> mapOne = companyModel1.getDriverRouteMap();
+        Map<Driver, Route> mapTwo = companyModel2.getDriverRouteMap();
+        assertEquals(mapOne.size(), 2);
+        assertEquals(mapTwo.size(), 2);
+        assertEquals(mapOne.get(Alexander), route1);
+        assertEquals(mapOne.get(Paul), route2);
+        assertEquals(mapTwo.get(Alina), route3);
+        assertEquals(mapTwo.get(Stepan), route4);
     }
 }

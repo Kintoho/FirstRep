@@ -2,10 +2,7 @@ package ru.ssau.tk.alexanderkhkh.FirstRep.collections;
 
 import ru.ssau.tk.alexanderkhkh.FirstRep.Person;
 
-import java.util.Collection;
-import java.util.Date;
-import java.util.LinkedHashSet;
-import java.util.List;
+import java.util.*;
 
 public class CompanyModel {
 
@@ -13,11 +10,21 @@ public class CompanyModel {
     private final Collection<Route> allRoutes;
     private final Collection<Driver> allDrivers;
     private int maxId = 0;
+    private final Map<Driver, Route> driverRouteMap;
 
     public CompanyModel() {
         allLocations = new LinkedHashSet<>();
         allRoutes = new LinkedHashSet<>();
         allDrivers = new LinkedHashSet<>();
+        driverRouteMap = new LinkedHashMap<>();
+    }
+
+    public Map<Driver, Route> getDriverRouteMap() {
+        return driverRouteMap;
+    }
+
+    public void assignRoute(Driver driver, Route route) {
+        driverRouteMap.put(driver, route);
     }
 
     public Collection<Location> getAllLocations() {
