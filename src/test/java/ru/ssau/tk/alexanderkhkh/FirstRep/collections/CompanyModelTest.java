@@ -30,7 +30,7 @@ public class CompanyModelTest {
 
     private void fillModels() {
         village1 = companyModel1.addSettlement("village1", 20.36, 45.12, Location.SettlementType.VILLAGE, 1200);
-        village2 = companyModel1.addSettlement("village2", 20.45, 45.81, Location.SettlementType.VILLAGE, 540);
+        village2 = companyModel1.addSettlement("village2", 20.45, 48.81, Location.SettlementType.VILLAGE, 540);
         city1 = companyModel1.addSettlement("city1", 20.47, 46.01, Location.SettlementType.CITY, 1250000);
         city2 = companyModel1.addSettlement("city2", 21.87, 45.84, Location.SettlementType.CITY, 384000);
         village1Warehouse = companyModel1.addWaypoint("village1.Warehouse", 20.36, 45.12, Location.WaypointType.WAREHOUSE, village1);
