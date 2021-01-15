@@ -19,6 +19,40 @@ public class RouteTest {
     Location location5 = new Location();
 
     @Test
+    public void testToString() {
+        Settlement village = new Settlement();
+        Settlement city = new Settlement();
+        Waypoint depot = new Waypoint();
+        Waypoint warehouse = new Waypoint();
+        Route route = new Route();
+        village.setType(Location.SettlementType.VILLAGE);
+        city.setType(Location.SettlementType.CITY);
+        depot.setType(Location.WaypointType.DEPOT);
+        warehouse.setType(Location.WaypointType.WAREHOUSE);
+        village.setName("Miass");
+        city.setName("Samara");
+        depot.setName("depot");
+        warehouse.setName("warehouse");
+        village.setLatitude(104.3);
+        city.setLatitude(64.9);
+        depot.setLatitude(66.6);
+        warehouse.setLatitude(56.6);
+        village.setLongitude(44.4);
+        city.setLongitude(40.8);
+        depot.setLongitude(41.6);
+        warehouse.setLongitude(42.2);
+        route.addLocation(village);
+        route.addLocation(city);
+        route.addLocation(warehouse);
+        route.addLocation(depot);
+        assertEquals(route.toString(),
+                "Settlement. Type: VILLAGE; name: Miass; latitude: 104.3; longitude: 44.4\n" +
+                        "Settlement. Type: CITY; name: Samara; latitude: 64.9; longitude: 40.8\n" +
+                        "Waypoint. Type: WAREHOUSE; name: warehouse; latitude: 56.6; longitude: 42.2\n" +
+                        "Waypoint. Type: DEPOT; name: depot; latitude: 66.6; longitude: 41.6\n");
+    }
+
+    @Test
     public void testAddLocation() {
 
         List<Location> locations = new ArrayList<>();

@@ -9,6 +9,23 @@ public class Route implements Iterable<Location> {
     private List<Location> locations = new ArrayList<>();
 
     @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (Location location : locations) {
+            if (location.getClass() == Settlement.class) {
+                Settlement settlement = (Settlement) location;
+                stringBuilder.append(settlement.toString());
+            }
+            if (location.getClass() == Waypoint.class) {
+                Waypoint waypoint = (Waypoint) location;
+                stringBuilder.append(waypoint.toString());
+            }
+            stringBuilder.append("\n");
+        }
+        return stringBuilder.toString();
+    }
+
+    @Override
     public boolean equals(Object object) {
         if (this == object) return true;
         if (object == null || getClass() != object.getClass()) return false;
