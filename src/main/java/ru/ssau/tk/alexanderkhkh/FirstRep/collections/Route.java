@@ -6,11 +6,13 @@ import java.util.List;
 import java.util.Objects;
 
 public class Route implements Iterable<Location>, Comparable<Route> {
+
     private List<Location> locations = new ArrayList<>();
+    private final RouteLengthComparator routeLengthComparator = new RouteLengthComparator();
 
     @Override
     public int compareTo(Route anotherRoute) {
-        return Double.compare(this.length(), anotherRoute.length());
+        return  routeLengthComparator.compare(this, anotherRoute);
     }
 
     @Override
