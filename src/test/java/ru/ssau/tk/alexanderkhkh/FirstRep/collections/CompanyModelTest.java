@@ -218,4 +218,18 @@ public class CompanyModelTest {
         assertEquals(locations, new ArrayList<>(Arrays.asList(village1, village1Warehouse, village2Waypoint, village2,
                 city1, city1Depot, loneDepot, city2, city2Warehouse)));
     }
+
+    @Test
+    public void testSort() {
+        fillModels();
+        List<Settlement> settlements = new ArrayList<>(Arrays.asList(city1, village2, city2, village1));
+        CompanyModel.sort(settlements, Comparator.comparingInt(Location::getId));
+        assertEquals(settlements, new ArrayList<>(Arrays.asList(village1, village2, city1, city2)));
+        CompanyModel.sort(settlements, Comparator.comparingInt(Settlement::getSettlement));
+        assertEquals(settlements, new ArrayList<>(Arrays.asList(village2, village1, city2, city1)));
+        CompanyModel.sort(settlements, Comparator.comparingDouble(Location::getLatitude));
+        assertEquals(settlements, new ArrayList<>(Arrays.asList(village1, village2, city1, city2)));
+        CompanyModel.sort(settlements, new EquatorComparator());
+        assertEquals(settlements, new ArrayList<>(Arrays.asList(village1, village2, city1, city2)));
+    }
 }

@@ -19,6 +19,10 @@ public class CompanyModel {
         driverRouteMap = new LinkedHashMap<>();
     }
 
+    public static void sort(List<Settlement> settlements, Comparator<? super Settlement> comparator) {
+        settlements.sort(comparator);
+    }
+
     public Map<Driver, Route> getDriverRouteMap() {
         return driverRouteMap;
     }
