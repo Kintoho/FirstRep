@@ -1,11 +1,13 @@
 package ru.ssau.tk.alexanderkhkh.FirstRep.collections;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
-public class Route {
-    private ArrayList<Location> locations = new ArrayList<>();
+public class Route implements Iterable<Location> {
+    private List<Location> locations = new ArrayList<>();
 
-    public ArrayList<Location> getLocation() {
+    public List<Location> getLocation() {
         return locations;
     }
 
@@ -17,7 +19,20 @@ public class Route {
         this.locations.add(index,location);
     }
 
-    public void deleteLocation(int index){
+    public void removeLocation(int index){
         this.locations.remove(index);
+    }
+
+    public Location getFirstLocation(){
+        return locations.get(0);
+    }
+
+    public Location getLastLocation(){
+        return locations.get(locations.size()-1);
+    }
+
+    @Override
+    public Iterator<Location> iterator() {
+        return locations.iterator();
     }
 }
